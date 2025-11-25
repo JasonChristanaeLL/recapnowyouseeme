@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+:root {
+  --bg-dark: #0d0d0d; /* gelap misterius */
+  --card-dark: #1a1a1a; /* kotak konten gelap */
+  --accent-main: #f39c12; /* emas untuk highlight */
+  --accent-secondary: #ffffff; /* teks terang */
+  --text-light: #ecf0f1;
+  --accent-highlight: #8e44ad; /* ungu neon untuk efek sulap */
+  --shadow-color: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.header {
+  background: linear-gradient(90deg, #8e44ad, #f39c12);
+  padding: 40px 0;
+  text-align: center;
+  color: var(--accent-secondary);
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.navigasi {
+  background: #1a1a1a;
+  border-bottom: 2px solid #ffb400;
+}
+.navigasi ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 15px 0;
+}
+.navigasi a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.navigasi a:hover {
+  color: #ffb400;
+}
+
+#content .content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  background: #1a1a1a;
+  border-radius: 15px;
+  border: 2px solid #ffb400;
+  padding: 40px 30px;
+  box-shadow: 0 0 25px rgba(255, 180, 0, 0.3);
+  text-align: left;
+  color: #f0f0f0;
+}
+
+#content h1 {
+  font-size: 2.2rem;
+  color: #ffb400;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#content h2 {
+  color: #ffb400;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+#content p strong {
+  color: #ffb400;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.cast {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px 40px;
+  background: #1b1b2f;
+  border-radius: 14px;
+  border: 2px solid #ffb400;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  color: #f0f0f0;
+}
+
+.cast h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #ffb400;
+}
+
+.character-list {
+  list-style: none;
+  padding: 0;
+}
+
+.character-list li {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #ffb400;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  transition: transform 0.3s;
+}
+
+.character-list li:hover {
+  transform: translateX(5px);
+}
+
+.gallery {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  border: 2px solid #f39c12;
+  box-shadow: 0 0 25px rgba(142, 68, 173, 0.5);
+  text-align: center;
+}
+
+.gallery h1 {
+  font-size: 2rem;
+  color: #f39c12; /* emas */
+  margin-bottom: 25px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background: #111;
+  border: 2px solid #8e44ad; /* ungu */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #8e44ad;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #f39c12; /* efek hover emas */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.gallery-item p {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  background: #1a1a1a;
+  border-top: 1px solid #f39c12;
+  text-align: center;
+}
+
+.footer {
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  color: var(--text-light);
+  padding: 50px 0;
+  border-top: 3px solid var(--accent-highlight);
+}
+
+.footer-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+}
+
+.footer-col h3 {
+  color: var(--accent-secondary);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 7px 0;
+  font-size: 15px;
+}
+
+.footer-col ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: var(--accent-highlight);
+  padding-left: 5px;
+}
